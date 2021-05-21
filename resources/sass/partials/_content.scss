@@ -30,6 +30,10 @@ main#home {
       }
     }
     .button {
+      display: flex;
+      justify-content: space-around;
+
+      width: 100%;
       background-color: $colorblue;
       color: $colorwhite;
       font-weight: 700;
@@ -47,6 +51,14 @@ main#single {
     height: 60px;
     background-color: $colorblue;
     display: flex;
+    form {
+      display: flex;
+      input {
+        background-color: transparent;
+        color: $colorwhite;
+        cursor: pointer;
+      }
+    }
     button {
         background-color: transparent;
         color: $colorwhite;
@@ -148,4 +160,19 @@ main#single {
   }
 }
 
-
+main#form {
+  border-top: 25px solid $colorblue;
+  .container {
+    width: 30%;
+    form {
+      display: flex;
+      flex-direction: column;
+      >* {
+        padding: 10px 0;
+        margin: 10px 0;
+        border: 3px solid $colorblue;
+        font-size: 15px;
+      }
+    }
+  }
+}

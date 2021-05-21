@@ -7,6 +7,12 @@
           <div class="container">
               <button><a href="{{route('home')}}">Torna alla Home</a></button>
               <button><a href="{{route('comics.index')}}">Torna ai Fumetti</a></button>
+              <button><a href="{{route('comics.edit', ['comic' => $comic->id])}}">Modifica Fumetto</a></button>
+              <form action="{{route('comics.destroy', ['comic' => $comic->id])}}" method="post">
+              @csrf
+              @method('DELETE')
+              <input onclick="return confirm('Are you sure')" type="submit" name="" value="Cancella Fumetto">
+              </form>
           </div>
     </div>
     <div class="container pt-6 pb-6">

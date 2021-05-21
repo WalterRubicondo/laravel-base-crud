@@ -18,6 +18,7 @@
         @endforeach
         <div class="button">
             <a href="{{route('home')}}">Torna alla Home</a>
+            <a href="{{route('comics.create')}}">Inserisci un Fumetto</a>
         </div>
     </div>
 </main>

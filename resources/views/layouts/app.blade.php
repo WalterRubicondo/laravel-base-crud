@@ -14,5 +14,8 @@
             @yield('main')
 
         @include('partials.footer')
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="./app.js" charset="utf-8"></script>
     </body>
 </html>
