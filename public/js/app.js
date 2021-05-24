@@ -19383,8 +19383,17 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 Vue.config.devtools = true;
 var app = new Vue({
   el: '#root',
-  data: {},
-  methods: {}
+  data: {
+    show: false
+  },
+  methods: {
+    confirmation: function confirmation() {
+      this.show = true;
+    },
+    dismiss: function dismiss() {
+      this.show = false;
+    }
+  }
 });
 
 /***/ }),

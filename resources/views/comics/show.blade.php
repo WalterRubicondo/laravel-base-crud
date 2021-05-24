@@ -3,16 +3,25 @@
 
 @section('main')
 <main id="single">
-    <div class="stripe">
+    <div class="stripe" id="root">
           <div class="container">
               <button><a href="{{route('home')}}">Torna alla Home</a></button>
               <button><a href="{{route('comics.index')}}">Torna ai Fumetti</a></button>
               <button><a href="{{route('comics.edit', ['comic' => $comic->id])}}">Modifica Fumetto</a></button>
-              <form action="{{route('comics.destroy', ['comic' => $comic->id])}}" method="post">
-              @csrf
-              @method('DELETE')
-              <input onclick="return confirm('Are you sure')" type="submit" name="" value="Cancella Fumetto">
-              </form>
+              <button @click="confirmation()">Cancella Fumetto</button>
+              <div class="modal" v-if="show">
+                <p>Sei sicuro di voler cancellare questo fumetto?</p>
+                <div>
+                    <button @click="dismiss()"> No </button>
+                </div>
+                <div>
+                    <form action="{{route('comics.destroy', ['comic' => $comic->id])}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" name="" value="Si">
+                    </form>
+                </div>
+              </div>
           </div>
     </div>
     <div class="container pt-6 pb-6">

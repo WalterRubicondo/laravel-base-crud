@@ -245,16 +245,44 @@ main#single .stripe form {
 }
 main#single .stripe form input {
   background-color: transparent;
-  color: #FFFFFF;
   cursor: pointer;
 }
 main#single .stripe button {
   background-color: transparent;
   color: #FFFFFF;
   padding: 5px;
+  cursor: pointer;
 }
 main#single .stripe button a {
   color: inherit;
+}
+main#single .stripe .modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  background-color: #FFFFFF;
+  width: 500px;
+  height: 200px;
+  top: 50%;
+  left: 30%;
+  border: 3px solid #0282F9;
+  border-radius: 20px;
+}
+main#single .stripe .modal button {
+  background-color: #0282F9;
+  color: #FFFFFF;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+}
+main#single .stripe .modal form input {
+  background-color: #0282F9;
+  color: #FFFFFF;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
 }
 main#single .container {
   display: flex;

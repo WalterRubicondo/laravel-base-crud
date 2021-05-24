@@ -55,7 +55,6 @@ main#single {
       display: flex;
       input {
         background-color: transparent;
-        color: $colorwhite;
         cursor: pointer;
       }
     }
@@ -63,9 +62,42 @@ main#single {
         background-color: transparent;
         color: $colorwhite;
         padding: 5px;
+        cursor: pointer;
         a {
           color: inherit;
         }
+    }
+    .modal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      position: absolute;
+      background-color: $colorwhite;
+      width: 500px;
+      height: 200px;
+      top: 50%;
+      left: 30%;
+      border: 3px solid $colorblue;
+      border-radius: 20px;
+      button {
+        background-color: $colorblue;
+        color: $colorwhite;
+        width: 100px;
+        height: 40px;
+        border-radius: 20px;
+      }
+      form {
+        input {
+          background-color: $colorblue;
+          color: $colorwhite;
+          width: 100px;
+          height: 40px;
+          border-radius: 20px;
+        }
+
+      }
     }
   }
   .container {

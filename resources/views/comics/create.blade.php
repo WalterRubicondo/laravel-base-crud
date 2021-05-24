@@ -2,6 +2,15 @@
 
 @section('main')
     <main id="form">
+        @if ($errors->any())
+            <div>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     <div class="container pt-6 pb-6">
             <form action="{{route('comics.store')}}" method='post'>
                 @csrf
